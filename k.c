@@ -38,9 +38,9 @@ void handle_signal(int sig) {
 
 void check_expiry() {
     struct tm expiry_tm = {0};
-    expiry_tm.tm_year = 2025 - 1900;
-    expiry_tm.tm_mon = 4;
-    expiry_tm.tm_mday = 25;
+    expiry_tm.tm_year = 2026 - 1900;
+    expiry_tm.tm_mon = 12;
+    expiry_tm.tm_mday = 30;
     time_t now = time(NULL);
     if (now > mktime(&expiry_tm)) {
         fprintf(stderr, "This binary has expired baap se mang @venomxpapa.\n");
